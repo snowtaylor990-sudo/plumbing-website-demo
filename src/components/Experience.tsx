@@ -1,5 +1,5 @@
 import { CheckCircle2, Calendar, Users, Wrench } from "lucide-react";
-import experiencePlumber from "@/assets/experience-plumber.jpg";
+import { Timeline, type TimelineItem } from "@/components/ui/timeline";
 
 const Experience = () => {
   const stats = [
@@ -13,6 +13,49 @@ const Experience = () => {
   { icon: Users, title: "Staff Arrived", description: "Certified plumber on-site" },
   { icon: CheckCircle2, title: "Problem Solved", description: "Quality guaranteed work" }];
 
+  // Business journey timeline
+  const timelineItems: TimelineItem[] = [
+    {
+      id: "1",
+      title: "Company Founded",
+      description: "Started serving Miami with a vision to provide exceptional plumbing services",
+      timestamp: new Date("1999-01-01"),
+      status: "completed",
+      icon: <Wrench className="h-3 w-3" />,
+    },
+    {
+      id: "2",
+      title: "Expanded Service Area",
+      description: "Grew to serve over 500+ homes across Miami-Dade County",
+      timestamp: new Date("2005-06-15"),
+      status: "completed",
+      icon: <Users className="h-3 w-3" />,
+    },
+    {
+      id: "3",
+      title: "Professional Certification",
+      description: "All staff members received advanced plumbing certifications",
+      timestamp: new Date("2010-03-20"),
+      status: "completed",
+      icon: <CheckCircle2 className="h-3 w-3" />,
+    },
+    {
+      id: "4",
+      title: "Award-Winning Service",
+      description: "Recognized as Miami's top-rated plumbing service provider",
+      timestamp: new Date("2020-11-10"),
+      status: "completed",
+      icon: <CheckCircle2 className="h-3 w-3" />,
+    },
+    {
+      id: "5",
+      title: "Continuous Growth",
+      description: "Expanding our team and services to better serve our community",
+      timestamp: new Date(),
+      status: "active",
+      icon: <Calendar className="h-3 w-3" />,
+    },
+  ];
 
   return (
     <section className="py-24 lg:py-32 bg-[#F9FBFF]">
@@ -40,7 +83,6 @@ const Experience = () => {
                     </div>
                     <p className="text-sm font-medium text-body-text">{stat.label}</p>
                   </div>
-                  {/* Vertical divider - hide on last item and mobile */}
                   {index < stats.length - 1 && (
                     <div className="hidden sm:block w-px h-16 bg-gray-200 mx-4"></div>
                   )}
@@ -64,6 +106,17 @@ const Experience = () => {
                   </div>
                 </div>
               )}
+            </div>
+
+            {/* Business Journey Timeline */}
+            <div className="bg-white rounded-xl shadow-sm p-6">
+              <h3 className="text-2xl font-bold text-heading mb-6">Our Journey</h3>
+              <Timeline 
+                items={timelineItems} 
+                variant="compact"
+                showTimestamps={true}
+                timestampPosition="inline"
+              />
             </div>
           </div>
 
