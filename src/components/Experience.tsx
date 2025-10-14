@@ -59,7 +59,7 @@ const Experience = () => {
           {/* Right Image */}
           <div className="relative animate-fade-in">
             <img
-              src={experiencePlumber}
+              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/experience-plumber-1760467314482.jpg"
               alt="Professional plumber installing sink in modern Miami bathroom"
               className="rounded-2xl shadow-xl !w-full !h-full !max-w-full" />
 
