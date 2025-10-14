@@ -15,41 +15,52 @@ const Experience = () => {
 
 
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section className="py-24 lg:py-32 bg-[#F9FBFF]">
+      <div className="container mx-auto px-6 lg:px-8">
+        <div className="grid lg:grid-cols-[5fr_6fr] gap-16 lg:gap-20 items-center">
           {/* Left Content */}
-          <div className="space-y-10 animate-fade-in">
+          <div className="space-y-12 animate-fade-in">
             <div>
-              <p className="text-primary font-semibold mb-2">OUR EXPERIENCE</p>
-              <h2 className="text-4xl lg:text-5xl font-heading font-bold text-heading">
+              <p className="text-primary font-semibold mb-3">OUR EXPERIENCE</p>
+              <h2 className="text-[38px] lg:text-[42px] font-heading font-extrabold text-heading leading-tight">
                 A Professional Quality Plumbing Service
               </h2>
-              <p className="text-muted-foreground mt-3">
+              <p className="text-[#333] mt-4 text-base">
                 Our team is trained, certified, and trusted by 500+ Miami homes.
               </p>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6">
-              {stats.map((stat, index) =>
-              <div key={index} className="text-center">
-                  <p className="text-4xl font-bold text-primary mb-1">{stat.value}</p>
-                  <p className="text-sm text-body-text">{stat.label}</p>
-                </div>
-              )}
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-0 bg-white rounded-xl shadow-sm p-6">
+              {stats.map((stat, index) => (
+                <>
+                  <div key={index} className="text-center flex-1">
+                    <div className="bg-primary/10 rounded-lg py-3 px-4 mb-2">
+                      <p className="text-4xl lg:text-5xl font-bold text-primary mb-1">{stat.value}</p>
+                    </div>
+                    <p className="text-sm font-medium text-body-text">{stat.label}</p>
+                  </div>
+                  {/* Vertical divider - hide on last item and mobile */}
+                  {index < stats.length - 1 && (
+                    <div className="hidden sm:block w-px h-16 bg-gray-200 mx-4"></div>
+                  )}
+                </>
+              ))}
             </div>
 
             {/* Process Steps */}
-            <div className="grid sm:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-3 gap-8 lg:gap-10">
               {steps.map((step, index) =>
-              <div key={index} className="text-center space-y-3">
-                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
-                    <step.icon className="w-8 h-8 text-primary" />
+              <div 
+                key={index} 
+                className="text-center space-y-3 p-4 rounded-lg transition-all duration-300 hover:shadow-lg hover:bg-white group"
+              >
+                  <div className="w-20 h-20 rounded-full bg-primary/15 flex items-center justify-center mx-auto group-hover:bg-primary/20 transition-colors duration-300">
+                    <step.icon className="w-9 h-9 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-heading mb-1">{step.title}</h4>
-                    <p className="text-sm text-body-text">{step.description}</p>
+                    <h4 className="font-bold text-[#000] text-base mb-2">{step.title}</h4>
+                    <p className="text-[14px] leading-relaxed text-[#444]">{step.description}</p>
                   </div>
                 </div>
               )}
