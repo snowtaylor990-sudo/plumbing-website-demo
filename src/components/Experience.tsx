@@ -1,4 +1,4 @@
-import { Wrench } from "lucide-react";
+import { Wrench, Calendar, Truck, Home } from "lucide-react";
 
 const Experience = () => {
   return (
@@ -15,6 +15,47 @@ const Experience = () => {
               <p className="text-[#333] mt-4 text-base">
                 Our team is trained, certified, and trusted by 500+ Miami homes.
               </p>
+            </div>
+
+            {/* Timeline Component */}
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 lg:gap-4 pt-4">
+              {/* Step 1 */}
+              <div className="flex lg:flex-col items-center gap-4 lg:gap-2 relative flex-1">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center">
+                  <Calendar className="w-5 h-5 text-primary" />
+                </div>
+                <p className="text-sm font-bold text-heading text-left lg:text-center">Book Appointment</p>
+                {/* Connecting Line - Desktop */}
+                <div className="hidden lg:block absolute top-6 left-[calc(50%+24px)] w-full h-[2px] bg-primary/20" />
+              </div>
+
+              {/* Step 2 */}
+              <div className="flex lg:flex-col items-center gap-4 lg:gap-2 relative flex-1">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center">
+                  <Truck className="w-5 h-5 text-primary" />
+                </div>
+                <p className="text-sm font-bold text-heading text-left lg:text-center">Plumber Arrives</p>
+                {/* Connecting Line - Desktop */}
+                <div className="hidden lg:block absolute top-6 left-[calc(50%+24px)] w-full h-[2px] bg-primary/20" />
+              </div>
+
+              {/* Step 3 */}
+              <div className="flex lg:flex-col items-center gap-4 lg:gap-2 relative flex-1">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center">
+                  <Wrench className="w-5 h-5 text-primary" />
+                </div>
+                <p className="text-sm font-bold text-heading text-left lg:text-center">We Fix the Problem</p>
+                {/* Connecting Line - Desktop */}
+                <div className="hidden lg:block absolute top-6 left-[calc(50%+24px)] w-full h-[2px] bg-primary/20" />
+              </div>
+
+              {/* Step 4 */}
+              <div className="flex lg:flex-col items-center gap-4 lg:gap-2 flex-1">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center">
+                  <Home className="w-5 h-5 text-primary" />
+                </div>
+                <p className="text-sm font-bold text-heading text-left lg:text-center">Enjoy Your Home Again</p>
+              </div>
             </div>
           </div>
 
