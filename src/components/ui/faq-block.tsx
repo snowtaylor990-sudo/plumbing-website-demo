@@ -97,12 +97,9 @@ const FAQBlock = () => {
   return (
     <Card className="w-full max-w-2xl mx-auto">
       <CardContent className="flex flex-col gap-6 pt-6">
-        <Input
-          size="lg"
-          leftIcon={<Search />}
-          placeholder="Search FAQs..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)} className="!w-[91%] !h-full" />
+        <p className="text-sm text-center text-[#6b6b6b] py-2">
+          Browse through our most common customer questions below.
+        </p>
 
         <Accordion type="single" collapsible className="w-full">
           {filteredFaqs.length === 0 ?
