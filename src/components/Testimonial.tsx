@@ -3,64 +3,58 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { TestimonialsColumn } from "./ui/testimonials-columns";
-import customer1 from "@/assets/customer-1.jpg";
-import customer2 from "@/assets/customer-2.jpg";
-import customer3 from "@/assets/customer-3.jpg";
-import customer4 from "@/assets/customer-4.jpg";
-import customer5 from "@/assets/customer-5.jpg";
-import customer6 from "@/assets/customer-6.jpg";
-import customer7 from "@/assets/customer-7.jpg";
-import customer8 from "@/assets/customer-8.jpg";
-import customer9 from "@/assets/customer-9.jpg";
+
 const testimonials = [{
   text: "Miami Florida Plumbing saved the day! Our kitchen sink was completely backed up, and they arrived within 30 minutes. Professional, efficient, and reasonably priced. Highly recommend!",
-  image: customer1,
+  image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/916ff79f-1c05-4845-b096-318fdd6365ca/generated_images/professional-headshot-portrait-of-a-hisp-541bbede-20251014203431.jpg",
   name: "Maria Rodriguez",
   role: "Homeowner, Coral Gables"
 }, {
   text: "Best plumbing service in Miami! They installed our new water heater quickly and professionally. The team was courteous and cleaned up everything perfectly.",
-  image: customer2,
+  image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/916ff79f-1c05-4845-b096-318fdd6365ca/generated_images/professional-headshot-portrait-of-an-asi-4cf89aad-20251014203438.jpg",
   name: "Robert Chen",
   role: "Homeowner, Kendall"
 }, {
   text: "Outstanding service from start to finish. They diagnosed our leak problem accurately and fixed it the same day. Will definitely call them again!",
-  image: customer3,
+  image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/916ff79f-1c05-4845-b096-318fdd6365ca/generated_images/professional-headshot-portrait-of-a-cauc-0a4b0a48-20251014203447.jpg",
   name: "James Mitchell",
   role: "Property Manager"
 }, {
   text: "I've used several plumbers in Miami, but none compare to Miami Florida Plumbing. They're reliable, honest, and their work is top-notch. Five stars!",
-  image: customer4,
+  image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/916ff79f-1c05-4845-b096-318fdd6365ca/generated_images/professional-headshot-portrait-of-a-cauc-00943563-20251014203453.jpg",
   name: "Sarah Johnson",
   role: "Homeowner, Miami Beach"
 }, {
   text: "Had an emergency pipe burst at 2 AM. They answered immediately and had someone here within the hour. Saved us from major water damage. True professionals!",
-  image: customer5,
+  image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/916ff79f-1c05-4845-b096-318fdd6365ca/generated_images/professional-headshot-portrait-of-a-hisp-83ea11a8-20251014203501.jpg",
   name: "David Martinez",
   role: "Homeowner, Doral"
 }, {
   text: "Excellent experience! They replaced all our old pipes and the difference is amazing. Water pressure is perfect and no more strange noises. Worth every penny!",
-  image: customer6,
+  image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/916ff79f-1c05-4845-b096-318fdd6365ca/generated_images/professional-headshot-portrait-of-an-afr-83e46de3-20251014203518.jpg",
   name: "Linda Thompson",
   role: "Homeowner, Pinecrest"
 }, {
   text: "Professional, punctual, and affordable. They fixed our bathroom plumbing issues in no time. The technician explained everything clearly. Highly satisfied!",
-  image: customer7,
+  image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/916ff79f-1c05-4845-b096-318fdd6365ca/generated_images/professional-headshot-portrait-of-a-hisp-70a28ce8-20251014203526.jpg",
   name: "Carlos Gomez",
   role: "Business Owner"
 }, {
   text: "Best decision calling Miami Florida Plumbing! They installed our new dishwasher and garbage disposal flawlessly. Clean, efficient, and friendly service.",
-  image: customer8,
+  image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/916ff79f-1c05-4845-b096-318fdd6365ca/generated_images/professional-headshot-portrait-of-a-cauc-89f0f05f-20251014203534.jpg",
   name: "Amanda Wilson",
   role: "Restaurant Owner"
 }, {
   text: "They've been our go-to plumbers for years. Always reliable, fair pricing, and exceptional workmanship. Can't recommend them enough!",
-  image: customer9,
+  image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/916ff79f-1c05-4845-b096-318fdd6365ca/generated_images/professional-headshot-portrait-of-an-asi-f587cc33-20251014203542.jpg",
   name: "Michael Chang",
   role: "Homeowner, Coconut Grove"
 }];
+
 const firstColumn = testimonials.slice(0, 3);
 const secondColumn = testimonials.slice(3, 6);
 const thirdColumn = testimonials.slice(6, 9);
+
 const Testimonial = () => {
   return <section id="testimonial" className="py-20 bg-navy text-navy-foreground relative">
       <div className="container z-10 mx-auto px-4">
@@ -99,4 +93,5 @@ const Testimonial = () => {
       </div>
     </section>;
 };
+
 export default Testimonial;
