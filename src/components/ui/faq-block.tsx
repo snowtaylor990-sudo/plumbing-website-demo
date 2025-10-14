@@ -97,8 +97,8 @@ const FAQBlock = () => {
   return (
     <Card className="w-full max-w-2xl mx-auto">
       <CardContent className="flex flex-col gap-6 pt-6">
-        <p className="text-sm text-center text-[#6b6b6b] py-2">
-          Browse through our most common customer questions below.
+        <p className="text-[18px] md:text-[22px] font-semibold text-center text-black py-3">
+          Have questions? We've got answers.
         </p>
 
         <Accordion type="single" collapsible className="w-full">
