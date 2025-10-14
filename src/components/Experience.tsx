@@ -1,5 +1,6 @@
 import { CheckCircle2, Calendar, Users, Wrench } from "lucide-react";
 import { Timeline, type TimelineItem } from "@/components/ui/timeline";
+import React from "react";
 
 const Experience = () => {
   const stats = [
@@ -76,8 +77,8 @@ const Experience = () => {
             {/* Stats */}
             <div className="flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-0 bg-white rounded-xl shadow-sm p-6">
               {stats.map((stat, index) => (
-                <>
-                  <div key={index} className="text-center flex-1">
+                <React.Fragment key={index}>
+                  <div className="text-center flex-1">
                     <div className="bg-primary/10 rounded-lg py-3 px-4 mb-2">
                       <p className="text-4xl lg:text-5xl font-bold text-primary mb-1">{stat.value}</p>
                     </div>
@@ -86,7 +87,7 @@ const Experience = () => {
                   {index < stats.length - 1 && (
                     <div className="hidden sm:block w-px h-16 bg-gray-200 mx-4"></div>
                   )}
-                </>
+                </React.Fragment>
               ))}
             </div>
 
@@ -137,8 +138,8 @@ const Experience = () => {
           </div>
         </div>
       </div>
-    </section>);
-
+    </section>
+  );
 };
 
 export default Experience;
