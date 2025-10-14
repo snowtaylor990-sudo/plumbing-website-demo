@@ -1,25 +1,22 @@
 import { Card } from "./ui/card";
 import { Button } from "./ui/button";
-import team1 from "@/assets/team-1.jpg";
-import team2 from "@/assets/team-2.jpg";
-import team3 from "@/assets/team-3.jpg";
 
 const Team = () => {
   const teamMembers = [
   {
     name: "Mike Rodriguez",
     role: "Senior Plumber",
-    image: team1
+    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/team-1-1760473617715.jpg"
   },
   {
     name: "Sarah Martinez",
     role: "Master Plumber",
-    image: team2
+    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/team-2-1760473617713.jpg"
   },
   {
     name: "David Johnson",
     role: "Lead Technician",
-    image: team3
+    image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/team-3-1760473617707.jpg"
   }];
 
 
