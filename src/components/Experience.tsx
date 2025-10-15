@@ -64,7 +64,10 @@ const Experience = () => {
             <img
               src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/experience-plumber-1760467314482.jpg"
               alt="Professional plumber installing sink in modern Miami bathroom"
-              className="rounded-2xl shadow-xl !w-full !h-full !max-w-full" />
+              className="rounded-2xl shadow-xl !w-full !h-full !max-w-full"
+              loading="lazy"
+              width="600"
+              height="400" />
 
             {/* Decorative Badge */}
             <div className="absolute -top-6 -right-6 bg-primary text-primary-foreground w-32 h-32 rounded-full flex flex-col items-center justify-center shadow-2xl">

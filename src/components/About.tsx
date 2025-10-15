@@ -50,10 +50,13 @@ const About = () => {
 
           {/* Right Image */}
           <div className="relative animate-fade-in">
-            <img 
-              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/about-plumber-1760378321920.jpg" 
-              alt="Professional plumber working under sink in Miami home" 
+            <img
+              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/document-uploads/about-plumber-1760378321920.jpg"
+              alt="Professional plumber working under sink in Miami home"
               className="w-full h-auto rounded-2xl shadow-xl"
+              loading="lazy"
+              width="600"
+              height="400"
             />
             
             {/* Decorative Badge */}

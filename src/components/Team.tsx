@@ -41,7 +41,8 @@ const Team = () => {
                 src={member.image}
                 alt={`${member.name} - ${member.role} at Miami Florida Plumbing`}
                 width="826"
-                height="1239" />
+                height="1239"
+                loading="lazy" />
 
                 <div className="px-2 pt-2 sm:pb-0 sm:pt-4">
                   <div className="flex justify-between">
